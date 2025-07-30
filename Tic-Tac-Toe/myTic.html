@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="myTac.css">
+    <title>My TTT</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="header">
+            <div class="text">TIC TAC TOE</div>
+        </div>
+        
+        <div class="container">
+            <div class="game">
+                <button class="box linesR"></button>
+                <button class="box bottomLine"></button>
+                <button class="box linesL"></button>
+                <button class="box linesR"></button>
+                <button class="box bottomLine"></button>
+                <button class="box linesL"></button>
+                <button class="box lines2"></button>
+                <button class="box"></button>
+                <button class="box lines1"></button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Popup for Winner or Draw -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button onclick="closePopup()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="myToe.js"></script>
+</body>
+
+</html>

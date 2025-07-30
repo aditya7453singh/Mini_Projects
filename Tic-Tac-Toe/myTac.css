@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    /* dark black gradient */
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+#main {
+    position: absolute;
+}
+
+/*                                                      Header Section                                   */
+#header {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: red;
+    letter-spacing: 0.2rem;
+    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    text-shadow: 0 0 10px red, 0 0 20px #ff0000;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+/*                                                Gaming Area                                                */
+
+.container {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 30px red;
+    /* red glow */
+    border-radius: 10px;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border: none;
+    font-size: 4rem;
+    background-color: black;
+}
+
+.linesR {
+    border-right: 3px solid darkred;
+    border-bottom: 3px solid darkred;
+}
+
+.linesL {
+    border-left: 3px solid darkred;
+    border-bottom: 3px solid darkred;
+}
+
+.lines1 {
+    border-left: 3px solid darkred;
+}
+
+.lines2 {
+    border-right: 3px solid darkred;
+}
+
+.bottomLine {
+    border-bottom: 3px solid darkred;
+}
+
+
+/* ---------------- POPUP MESSAGE STYLING ---------------- */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #111;
+    color: white;
+    width: 20vw;
+    height: 20vh;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid red;
+    box-shadow: 0 0 20px red;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.popup-content button:hover {
+    background-color: darkred;
+}
+
+
+/*                                           BLUR EFFECT AFTER POPUP                    */
+
+.blur {
+    position: relative;
+    filter: blur(15px);
+    pointer-events: none;
+    /* Prevent clicks on blurred elements */
+}
+
+.blur::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px red, 0 0 10px #ff0000;
+    }
+
+    50% {
+        text-shadow: 0 0 10px red, 0 0 20px #ff1a1a;
+    }
+
+    100% {
+        text-shadow: 0 0 5px red, 0 0 10px #ff0000;
+    }
+}
