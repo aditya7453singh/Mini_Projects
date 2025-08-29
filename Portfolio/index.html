@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <meta name="description" content="A responsive, accessible portfolio to showcase projects, skills, and contact information." />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="site-header" id="top">
+      <a class="logo" href="#home" aria-label="Go to home">👩‍💻 Portfolio</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="hamburger" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-live="polite" aria-label="Switch to dark theme">🌙</button>
+    </header>
+    <div id="navOverlay" class="nav-overlay" hidden></div>
+
+    <main>
+      <!-- Home -->
+      <section id="home" class="section hero" tabindex="-1">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Hi, I’m <span class="accent">ADITYA SINGH</span>.</h1>
+            <p class="lead">Front-End Developer who loves building clean, fast, and accessible web experiences.</p>
+            <div class="cta-row">
+              <a href="#projects" class="btn primary">See my work</a>
+              <a href="#contact" class="btn">Contact me</a>
+            </div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Abstract code themed illustration">
+            <div class="blob"></div>
+            <div class="card code-card">
+<pre><code>// quick bio
+const me = {
+  Name: "Aditya SINGH",
+  Role: "Front-End Developer",
+  Skill: ["HTML" , "CSS" , "JavaScript" , "WordPress"]
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section about" tabindex="-1">
+        <div class="container narrow">
+          <h2>About</h2>
+          <p>
+            I’m a developer focused on crafting delightful user interfaces with modern, accessible, and responsive design.
+            I enjoy solving real problems with simple solutions and continuous learning. 
+            This portfolio is built with semantic HTML, modern CSS, and a pinch of JavaScript.
+          </p>
+          <ul class="tags" aria-label="Skills">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>WordPress</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Projects -->
+      <section id="projects" class="section projects" tabindex="-1">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="grid">
+
+            <!-- Expense Tracker -->
+            <article class="card project">
+              <img src="Screenshot (19).png" alt="Expense Tracker screenshot">
+              <div class="project-body">
+                <h3>Expense Tracker Application</h3>
+                <p>Personal finance tool to monitor income and expenses, featuring data visualization and transaction history.</p>
+                <div class="project-actions">
+                  <!-- Replace '#' with your live demo URL when available -->
+                  <a href="#" class="btn small live-link">Live</a>
+                  <a href="https://github.com/aditya7453singh/Mini_Projects/tree/aa3f048213ecf8115b80d6c2bedf0ee0726ac872/Expense%20Tracker" class="btn small outline" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- To-Do List -->
+            <article class="card project">
+              <img src="Screenshot (20).png" alt="To-Do List screenshot">
+              <div class="project-body">
+                <h3>To-Do List Application</h3>
+                <p>Interactive task management for organizing daily activities with add, delete, and mark as complete functionalities.</p>
+                <div class="project-actions">
+                  <!-- Replace '#' with your live demo URL when available -->
+                  <a href="#" class="btn small live-link">Live</a>
+                  <a href="https://github.com/aditya7453singh/Mini_Projects/tree/2619dd335d7111f4bffda155bdc94fa0815e0d0d/To-Do%20List" class="btn small outline" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tic Tac Toe -->
+            <article class="card project">
+              <img src="Screenshot (21).png" alt="Tic Tac Toe screenshot">
+              <div class="project-body">
+                <h3>Tic Tac Toe</h3>
+                <p>Responsive web game with a classic 3x3 grid and real time win / draw detection.</p>
+                <div class="project-actions">
+                  <!-- Replace '#' with your live demo URL when available -->
+                  <a href="#" class="btn small live-link">Live</a>
+                  <a href="https://github.com/aditya7453singh/Mini_Projects/tree/2619dd335d7111f4bffda155bdc94fa0815e0d0d/Tic-Tac-Toe" class="btn small outline" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contact -->
+      <section id="contact" class="section contact" tabindex="-1">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <form class="card contact-form" id="contactForm">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required placeholder="Aditya Singh"/>
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required placeholder="xyz@gmail.com"/>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required placeholder="Something to say..."></textarea>
+              </label>
+              <button type="submit" class="btn primary">Send</button>
+              <p class="form-note">This is a demo form. <a id="mailtoLink" href="#">Email me directly</a>.</p>
+            </form>
+            <div class="card map-card" aria-label="Map showing your location">
+              <div class="map-responsive">
+                <iframe
+                  title="Google Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220725.80296773236!2d78.42588255!3d30.184545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390910887083afa1%3A0xafad505df552aee!2sShivpuri%20Range%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1756470977717!5m2!1sen!2sin"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> ADITYA SINGH. All rights reserved.</p>
+        <a class="btn small to-top" href="#top" aria-label="Back to top">↑ Top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
