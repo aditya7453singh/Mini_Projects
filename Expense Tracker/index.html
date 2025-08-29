@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense_Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="balance">
+      <h2>Current Balance: ₹<span id="balance">0.00</span></h2>
+    </div>
+
+    <div class="transaction-form">
+      <h3>Add New Transaction</h3>
+      <form id="transactionForm">
+        <input type="text" id="transactionName" placeholder="Transaction Name" required>
+        <input type="number" id="transactionAmount" placeholder="Amount" required>
+        <select id="transactionType">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="date" id="transactionDate" required>
+        <input type="text" id="transactionCategory" placeholder="Category (e.g. Food, Salary)">
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+
+    <div class="filters">
+      <h3>Filters</h3>
+      <input type="month" id="filterMonth">
+      <input type="text" id="filterCategory" placeholder="Filter by Category">
+      <button id="applyFilters">Apply Filters</button>
+      <button id="clearFilters">Clear Filters</button>
+    </div>
+
+    <div class="transaction-history">
+      <h3>Transaction History</h3>
+      <ul id="transactionList"></ul>
+    </div>
+
+    <div class="summary">
+      <h3>Monthly Summary</h3>
+      <p>Income: ₹<span id="monthlyIncome">0.00</span></p>
+      <p>Expenses: ₹<span id="monthlyExpense">0.00</span></p>
+    </div>
+
+    <div class="export">
+      <button id="exportCSV">Export as CSV</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

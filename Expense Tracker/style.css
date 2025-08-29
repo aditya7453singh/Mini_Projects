@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.container {
+  width: 420px;
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.balance {
+  margin-bottom: 20px;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.transaction-form, .transaction-history, .filters, .summary, .export {
+  margin-bottom: 20px;
+}
+
+/* Make all inputs/selects/buttons equal width */
+form input, form select, form button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.filters input, .filters button {
+  width: 48%;
+  padding: 8px;
+  margin: 5px 1%;
+  box-sizing: border-box;
+}
+
+.transaction-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.income {
+  color: darkgreen;
+}
+
+.expense {
+  color: red;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: darkred;
+  cursor: pointer;
+  font-weight: bolder;
+}
