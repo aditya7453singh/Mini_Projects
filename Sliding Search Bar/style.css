@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium';
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    color: black;
+}
+
+.box {
+    max-width: 400px;
+    width: 100%;
+}
+
+.box .searchBox {
+    position: relative;
+    height: 50px;
+    max-width: 50px;
+    margin:auto;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.searchBox input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.searchBox .icon {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    background-color: black;
+    color: burlywood;
+    height: 100%;
+    width: 52px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+#check:checked ~ .searchBox {
+    max-width: 380px;
+}
+
+#check:checked ~ .searchBox .icon{
+    background-color: burlywood;
+    color: black;
+    width: 60px;
+    border-radius: 0 25px 25px 0;
+}
+
+#check {
+    display: none;
+}
