@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+.clock-container {
+  text-align: center;
+  padding: 30px 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.clock {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00e6d3;
+  text-shadow: 
+    0 0 6px rgba(0, 230, 211, 0.6),
+    0 0 12px rgba(0, 230, 211, 0.4);
+  letter-spacing: 3px;
+}
+
+body.light .clock {
+  color: #0072ff;
+  text-shadow: 
+    0 0 5px rgba(0, 114, 255, 0.4),
+    0 0 10px rgba(0, 114, 255, 0.2);
+}
+
+
+.date {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.toggle-btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toggle-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 200, 255, 0.6);
+}
+
+/* Light Mode */
+body.light {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+body.light .clock {
+  color: #030405;
+  text-shadow: 0 0 6px #006eff, 0 0 15px #006eff;
+}
+
+body.light .date {
+  color: #333;
+}
+
+body.light .toggle-btn {
+  background: linear-gradient(135deg, #333, #555);
+  color: #fff;
+}
